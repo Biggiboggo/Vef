@@ -1,0 +1,18 @@
+<%- include('header') -%>
+
+  <p>Halló admin!</p>
+
+  <% if (events.length===0) { %>
+    <p>Engir Viðburðir</p>
+    <% } else { %>
+      <ul>
+        <% events.forEach((events)=> { %>
+          <li>
+            <%= events.name <br> events.describrion <br> <a href="/admin/" + events.slug class="a1">Uppfæra
+                viðburð</a>%>
+          </li>
+          <% }) %>
+      </ul>
+      <% } %>
+
+        <%- include('footer') -%>

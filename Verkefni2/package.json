@@ -1,0 +1,53 @@
+{
+  "name": "timi2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "static-build": "node ./src/build.js && cpy public dist",
+    "start": "node ./src/app.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js",
+    "prettier": "prettier --write .",
+    "lint": "concurrently npm:lint:*",
+    "lint:eslint": "eslint ./src/**/*.js",
+    "lint:stylelint": "stylelint ./public/styles.css",
+    "static-dev": "browser-sync start --serveStatic ./dist --server --files ./public/styles.css ./dist/*.html",
+    "dev": "nodemon ./src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^24.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cpy-cli": "^3.1.1",
+    "dotenv": "^14.3.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "gray-matter": "^4.0.3",
+    "heroku": "^7.59.2",
+    "marked": "^4.0.10",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3",
+    "pgsql": "^1.0.0",
+    "psql": "^0.0.1",
+    "xss": "^1.0.10"
+  }
+}

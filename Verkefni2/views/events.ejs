@@ -1,0 +1,20 @@
+<%- include('header') -%>
+
+  <h1>Viðburðasíðan</h1>
+
+  <h2>Viðburðir á næstunni</h2>
+
+  <% if (events.length===0) { %>
+    <p>Engir Viðburðir</p>
+    <% } else { %>
+      <ul>
+        <% events.forEach((events)=> { %>
+          <li>
+            <a href="/" + events.slug>events.name</a> <br>
+            <%= events.describrion%>
+          </li>
+          <% }) %>
+      </ul>
+      <% } %>
+
+        <%- include('footer-events') -%>

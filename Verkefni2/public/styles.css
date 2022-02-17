@@ -1,0 +1,35 @@
+ul {
+  display: flex;
+  font-size: 2rem;
+  list-style: none;
+}
+
+ul li {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+section {
+  background-color: #f0f;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+body {
+  background-color: #eee;
+}
+
+a {
+  color: #663;
+}
+
+.a1 {
+  color: #aa6;
+}
+
+form {
+  border-color: #aa6;
+}
